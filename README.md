@@ -24,14 +24,28 @@ An interactive map of 5,282 urban centres in 101 countries, classified by how th
 | **Leading** | Anchor | Isolated Pole |
 | **Lagging** | Connected Periphery | Structurally Lagging |
 
-## Using the dashboard
+## Using the explorer
 
-- Drag the timeline, or press play, to move across the 2005 to 2025 windows
-- Switch between the growth typology and the system-aware view
-- Pick a World Bank region to see city counts by country and category
-- Scroll to zoom, drag to pan, hover any city for its classification
+- Pick a region and country in the left panel, or click any city on the map, to open a written country profile and a sortable city table
+- Hover a city for its yearly growth in lights, population and built-up area, its exposure percentile and its distance to the nearest leading city
+- Switch between the system-aware view and the growth typology; click a legend entry to hide or show a category
 
-Everything is computed within each country, so each map is a mosaic of national classifications, not a global ranking.
+**Adjustable settings.** Every map, count and profile recomputes in the browser when a setting changes. A status line reports how many cities change category relative to the paper's settings, and "Reset to paper settings" restores them.
+
+| Setting | Meaning | Paper setting |
+|---|---|---|
+| Growth window | Period over which growth is measured; any five-year window or the long run 2000 to 2025 | 2020 to 2025 |
+| Distance decay | How fast a leading city's pull fades: gravity (exponent α), exponential (bandwidth in km) or a hard cut-off radius | Gravity, α = 1.5 |
+| Mass of leading cities | Night lights, or population where electrification is incomplete or activity largely informal | Night lights |
+| High-exposure threshold | Within-country exposure percentile above which a city counts as highly exposed | 50th (median) |
+| Minimum cities per country | Countries with fewer urban centres are left unclassified | 5 |
+| Leading requires absolute growth | Whether a Leading city's lights must actually grow, not just decline less than the national average | Off |
+
+Each country profile also reports typical city spacing and suggests an exponential bandwidth suited to that country's geography.
+
+Everything is computed within each country, so each map is a mosaic of national classifications, not a global ranking. Regions follow World Bank groupings, with Afghanistan and Pakistan under Middle East, North Africa, Afghanistan & Pakistan (MENAAP).
+
+The previous fixed-parameter dashboard remains at [classic.html](https://hobark.github.io/td-dashboard-public/classic.html).
 
 ## Data
 
