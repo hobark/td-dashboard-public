@@ -34,28 +34,28 @@ All figures use the paper's settings for 2020 to 2025. To follow along, pick the
 
 ![Morocco](guide/morocco_map.png)
 
-- Casablanca and Rabat are both Anchors: each is growing, within reach of the other.
-- Agadir shows why only growth counts. Market access ranks it at the 65th percentile of Moroccan cities, but the nearest growing city is 164 km away, so its exposure to growth falls to the 12th.
-- Lagging cities split cleanly by distance: Connected Peripheries are typically 57 km from a growing city and Structurally Lagging ones 103 km.
-- The results hold up when you change the distance settings; at most 1 of the 34 cities changes group.
+- **Poles that reinforce each other.** Casablanca and Rabat are both growing and within reach of each other, so both are Anchors.
+- **Size nearby is not growth nearby.** Agadir is surrounded by sizeable cities, so market access rates it well. None of them is growing, though, and the nearest growing city is 164 km away, so its exposure to growth is low.
+- **Distance does the sorting.** Lagging cities near the growth poles are Connected Peripheries; those about twice as far away are Structurally Lagging.
+- **A robust picture.** Changing the distance settings barely moves any city.
 
 ### Egypt: when everyone is slowing
 
 ![Egypt](guide/egypt_map.png)
 
-- **Labels are relative.** Night lights fell in 79% of Egyptian cities. Cairo's lights grew only 0.2% a year, yet it leads. Tick *Leading requires lights to grow in absolute terms* and Leading cities drop from 38 to 21.
+- **Labels are relative.** Night lights fell in most Egyptian cities, so Cairo leads even though its lights barely grew. Require absolute growth and the number of Leading cities nearly halves.
 - **The capital can be isolated.** The big Delta cities around Cairo (Tanta, El Mahalla El Kubra, El Mansura) are shrinking, so they add nothing to Cairo's exposure. Seen from their side, they are Connected Peripheries.
-- **Close is not the same as connected.** Most Structurally Lagging cities lie along the Nile in Upper Egypt, only about 26 km from a growing town. They lag because those towns are small.
-- **Settings matter in a dense system.** Cities are about 12 km apart, so a 50 km cut-off changes 29 of 101 cities, including Cairo, which becomes an Anchor.
+- **Close is not the same as connected.** Lagging towns along the Nile in Upper Egypt sit only about 26 km from a growing town, but those towns are small, so little growth is within reach.
+- **Settings matter in a dense system.** With cities about 12 km apart, a 50 km cut-off changes almost a third of them, and Cairo becomes an Anchor.
 
 ### Saudi Arabia: separate poles, long distances
 
 ![Saudi Arabia](guide/saudi_map.png)
 
-- **Growth sits in separate clusters.** Jeddah anchors the Red Sea coast, and Dammam and Al Ahsa anchor the Eastern Province.
-- **The capital is an Isolated Pole.** Riyadh's lights grew 4.1% a year, but the nearest other growing city is 300 km away.
-- **Shrinking neighbours don't help each other.** Abha sits next to Khamis Mushayt, so market access ranks it at the 65th percentile. Both are shrinking, so its exposure to growth falls to the 26th.
-- **The period matters more than distance.** Changing the distance settings moves at most 1 of 23 cities; switching to 2000 to 2025 moves 17, including Riyadh.
+- **Growth sits in separate clusters.** Jeddah anchors the Red Sea coast; Dammam and Al Ahsa anchor the Eastern Province.
+- **The capital is an Isolated Pole.** Riyadh is growing fast, but the nearest other growing city is 300 km away.
+- **Shrinking neighbours don't help each other.** Abha sits next to the larger Khamis Mushayt, which lifts its market access. Both are shrinking, so its exposure to growth stays low.
+- **The period matters more than distance.** Changing the distance settings barely moves any city; switching to 2000 to 2025 reshuffles most of them, including Riyadh.
 
 ## Adjusting the settings
 
