@@ -2,7 +2,7 @@
 
 **Open the explorer: https://hobark.github.io/td-dashboard-public/**
 
-This guide explains the idea behind the explorer, then walks through two examples, Morocco and Egypt, and ends with what each setting does. It accompanies the paper *Measuring territorial development from publicly available data: a typology of cities and their exposure to growth* (Park, under review).
+This guide explains the idea behind the explorer, then walks through three examples, Morocco, Egypt and Saudi Arabia, and ends with what each setting does. It accompanies the paper *Measuring territorial development from publicly available data: a typology of cities and their exposure to growth* (Park, under review).
 
 ## What we mean by territorial development
 
@@ -86,6 +86,21 @@ Now choose *Egypt*. It shows three things Morocco does not.
 **Settings matter more in dense systems.** Egyptian cities are typically 12 km apart, compared with 41 km in Morocco. A steeper gravity decay (α 2.5) changes the category of 16 of the 101 cities. A 50 km cut-off changes 29, and Cairo becomes an Anchor. The exponential decay suggested in the country profile (25 km) changes 8. For countries like Egypt, check results under more than one setting.
 
 ![Egypt country profile](guide/egypt_profile.png)
+
+## Example 3: Saudi Arabia, separate poles in a sparse system
+
+Now choose *Saudi Arabia*. Its cities are far apart, typically 84 km from their nearest neighbour, compared with 41 km in Morocco and 12 km in Egypt, and growth sits in a few separate places.
+
+![Saudi Arabia in the explorer](guide/saudi_map.png)
+
+- 23 cities are classified: 9 Leading, 6 Pressure, 1 Sprawl and 7 Lagging.
+- **Growth forms separate clusters.** On the Red Sea coast, Jeddah is an Anchor alongside Hayy as Salihiyah, 27 km away. In the Eastern Province, Dammam and Al Ahsa are Anchors to each other, 125 km apart.
+- **The capital is an Isolated Pole.** Riyadh's night lights grew 4.1% a year, among the fastest of the large cities, but the nearest other Leading city (Al Ahsa) is 300 km away. Its exposure to growth is only at the 17th percentile. Medina, Ha'il and Sakaka are Isolated Poles too. Each is growing, but largely on its own.
+- **Connected means something different here.** The typical Connected Periphery is 127 km from its nearest Leading city, and the typical Structurally Lagging city is 507 km away. As Sayh, 84 km from Riyadh, and At Ta'if, 127 km from Jeddah, are Connected Peripheries in these growth poles' reach.
+- **Two shrinking neighbours do not help each other.** In the southwest, Abha and Khamis Mushayt sit next to each other, about 500 km from Jeddah. Because Khamis Mushayt is large and close, standard market access ranks Abha at the 65th percentile of Saudi cities. Both are Lagging, with lights falling 4.1% and 3.0% a year, so neither adds to the other's exposure to growth, and Abha drops to the 26th percentile. Both are Structurally Lagging, as are Tabuk (395 km from the nearest Leading city) and Sharurah (800 km).
+- **The distance settings matter little; the period matters a lot.** Because the gaps between growth poles are so large, changing gravity α, using population as the mass, or applying the suggested 270 km exponential decay moves at most 1 of the 23 cities. Over the long run (2000 to 2025), 17 of the 23 change category, including Riyadh, which moves from Isolated Pole to Pressure.
+
+![Saudi Arabia country profile](guide/saudi_profile.png)
 
 ## What the settings do
 
