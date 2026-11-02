@@ -78,4 +78,3 @@ All settings are in the left panel. The map, counts and country profile update i
 - Exposure to growth is an opportunity, not an outcome: a nearby growing city can lift its neighbours or draw people and firms away from them.
 - Some urban centres inherit quirks from the GHSL boundaries, such as Luxor's 6.3 million residents.
 
-*Based on Park, H. "Measuring territorial development from publicly available data: a typology of cities and their exposure to growth" (under review).*
