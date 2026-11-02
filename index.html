@@ -158,7 +158,7 @@ footer a{color:var(--accent)}
 
   <section class="steps" aria-label="How the classification works">
     <div class="step"><span class="k">STEP 1</span><h3>Growth type</h3><p>Each city's growth in <b>night lights</b>, <b>population</b> and <b>built-up area</b> is compared with the other cities of its own country. The dimension that leads sets the type: Leading, Pressure, Sprawl or Lagging.</p></div>
-    <div class="step"><span class="k">STEP 2</span><h3>Exposure to growth</h3><p>Leading-Spillover Exposure adds up the economic mass of the country's Leading cities, discounted by distance. Two neighbours of a million people each, 50 km away, count the same under market access even if one grows 10% a year and the other shrinks 10%. <b>Here only the growing one counts.</b></p></div>
+    <div class="step"><span class="k">STEP 2</span><h3>Exposure to growth</h3><p>Leading-Spillover Exposure adds up the economic mass of the country's Leading cities, discounted by distance. Two neighbours of a million people each, 50 km away, count the same under market access even if one grows 10% a year and the other shrinks 10%. <b>Here only the growing one counts.</b> Exposure is high when large growing cities are close; a small growing town next door adds little.</p></div>
     <div class="step"><span class="k">STEP 3</span><h3>System-aware category</h3><p>Crossing type with exposure splits Leading cities into <b>Anchors</b> and <b>Isolated Poles</b>, and Lagging cities into <b>Connected Peripheries</b> and <b>Structurally Lagging</b> places.</p></div>
   </section>
 
@@ -317,7 +317,7 @@ const TYPE_TOK=['--c-lead','--c-pres','--c-spr','--c-lag'];
 const TYPE_DESC=['Night lights grow fastest, and above the national average.','Population grows faster than economic activity.','Built-up area grows faster than economic activity.','Below the national average on all three dimensions.'];
 const SYS_NAMES=['Anchor','Isolated Pole','Pressure','Sprawl','Connected Periphery','Structurally Lagging'];
 const SYS_TOK=['--c-anchor','--c-iso','--c-pres','--c-spr','--c-cp','--c-sl'];
-const SYS_DESC=['Leading, and close to other leading cities.','Leading, but far from the rest of the leading set.','Population outpaces economic activity.','Built-up area outpaces economic activity.','Lagging, but within reach of growth poles.','Lagging, and remote from every growth pole.'];
+const SYS_DESC=['Leading, with plenty of other growth within reach.','Leading, but little other growth within reach.','Population outpaces economic activity.','Built-up area outpaces economic activity.','Lagging, but with plenty of growth within reach.','Lagging, with little growth within reach.'];
 
 /* ---------- state ---------- */
 let P=Object.assign({},DEFAULTS);
@@ -550,8 +550,8 @@ function renderCountry(el){
   const nearAll=median(cls.filter(i=>R.type[i]!==0).map(i=>R.near[i]).filter(x=>!isNaN(x)));
   const sugg=isNaN(nearAll)?null:Math.max(10,Math.min(400,Math.round(nearAll/5)*5));
   const p1=`${name}, ${P.t0} to ${P.t1}: ${n} cities classified within the national system. ${T[0]} are Leading (${pct(T[0],n)}), ${T[1]} Pressure, ${T[2]} Sprawl and ${T[3]} Lagging (${pct(T[3],n)}, against ${pct(gT[3],gn)} across all classified cities). ${D.name[largest]}, the largest city, is ${TYPE_NAMES[R.type[largest]].toLowerCase()} in this window.`;
-  const p2= T[0]? (S[0]===S[1]?`Growth is split evenly: ${S[0]} of the ${T[0]} leading cities sit close to other leading cities (Anchors) and ${S[1]} are Isolated Poles.`:S[0]>S[1]?`Growth is clustered: ${S[0]} of the ${T[0]} leading cities sit close to other leading cities (Anchors), and ${S[1]} are Isolated Poles.`:`Growth is scattered: ${S[1]} of the ${T[0]} leading cities are Isolated Poles, set apart from the rest of the leading set, and only ${S[0]} are Anchors.`) : 'No city leads in this window, so exposure to growth is zero everywhere.';
-  const p3= T[3]? `Of the ${T[3]} lagging cities, ${S[4]} are Connected Peripheries within reach of growth poles and ${S[5]} are Structurally Lagging.`+(!isNaN(cpD)&&!isNaN(slD)?` The typical connected periphery is ${Math.round(cpD)} km from its nearest leading city; the typical structurally lagging city is ${Math.round(slD)} km away.`:'') : 'No city lags on all three dimensions in this window.';
+  const p2= T[0]? (S[0]===S[1]?`Growth is split evenly: ${S[0]} of the ${T[0]} leading cities have plenty of other growth within reach (Anchors) and ${S[1]} are Isolated Poles.`:S[0]>S[1]?`Growth is clustered: ${S[0]} of the ${T[0]} leading cities have plenty of other growth within reach (Anchors), and ${S[1]} are Isolated Poles.`:`Growth is scattered: ${S[1]} of the ${T[0]} leading cities are Isolated Poles with little other growth within reach, and only ${S[0]} are Anchors.`) : 'No city leads in this window, so exposure to growth is zero everywhere.';
+  const p3= T[3]? `Of the ${T[3]} lagging cities, ${S[4]} are Connected Peripheries with plenty of growth within reach and ${S[5]} are Structurally Lagging.`+(!isNaN(cpD)&&!isNaN(slD)?` The typical connected periphery is ${Math.round(cpD)} km from its nearest leading city; the typical structurally lagging city is ${Math.round(slD)} km away.`+(slD<=cpD?' Structurally lagging cities here are not farther from growth; the growing cities near them are small, so little growing activity is within reach.':''):'') : 'No city lags on all three dimensions in this window.';
   const lowInc=info[2]===0;
   const notes=[];
   if(lowInc && P.mass==='ntl') notes.push('This is a low-income system, where night lights can understate activity. Compare the result with population as the mass of leading cities.');
