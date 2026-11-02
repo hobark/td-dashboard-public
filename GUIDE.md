@@ -4,6 +4,15 @@
 
 This guide explains the idea behind the explorer, then walks through two examples, Morocco and Egypt, and ends with what each setting does. It accompanies the paper *Measuring territorial development from publicly available data: a typology of cities and their exposure to growth* (Park, under review).
 
+## What we mean by territorial development
+
+A city's prospects depend not only on its own size and growth, but on where it sits relative to the places where growth is happening in its country. The same slowdown means something different in a town next to a booming metropolis than in a town far from any growing city. This relational view runs from growth-pole theory to the New Economic Geography, but the usual measurement tools miss it:
+
+- **Urban typologies classify cities in isolation.** Two cities with the same profile get the same label, whether one adjoins a booming metropolis or sits in a remote interior.
+- **Market access counts size, not growth.** It adds up the economic mass of nearby cities. A shrinking neighbour counts exactly as much as a booming one of the same size.
+
+The explorer measures both a city's own growth and its position relative to growth in the rest of its country, using only open global data.
+
 ## The idea in two questions
 
 The explorer asks two questions about each of 5,423 urban centres. A city is always compared only with other cities in its own country.
@@ -35,6 +44,15 @@ Exposure splits two of the types in half:
 | **Lagging** | Connected Periphery | Structurally Lagging |
 
 Pressure and Sprawl keep their names.
+
+What the four categories mean:
+
+- **Anchor.** A growth pole surrounded by other poles. Its growth unfolds alongside, and is entangled with, growth nearby.
+- **Isolated Pole.** A growth pole with little other growth within reach. To a first approximation its growth is its own, so it is a natural place to ask whether that growth can spread to its surroundings. The balance between Anchors and Isolated Poles shows whether a country's growth is clustered or scattered.
+- **Connected Periphery.** A city that underperforms its country on every dimension, yet sits within reach of growth poles. The open question is its relationship to those poles: does nearby growth spill over to it, or draw its people and firms away?
+- **Structurally Lagging.** A city that underperforms on every dimension and has little growth within reach. Linking it to nearby growth is not an option, because there is little nearby growth to link to, so the constraints are more likely to be local or national.
+
+Connected Peripheries and Structurally Lagging cities look alike on their own attributes. Across 101 countries in the 2020 to 2025 window, their median populations are almost identical (176,000 and 182,000). What separates them is position: the median Connected Periphery is 48 km from its nearest Leading city, against 86 km for the median Structurally Lagging city. Neither size-based typologies nor market access would draw this line.
 
 On growth data alone, all Lagging cities look alike. For a Connected Periphery, the natural question is how to link it to the growth nearby. For a Structurally Lagging city that option is weak, and the binding constraints are more likely to be local.
 
